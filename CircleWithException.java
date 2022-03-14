@@ -1,5 +1,7 @@
 package lab;
 
+import java.util.Scanner;
+
 public class CircleWithException {
     private static int radius;
     private static int diameter;
@@ -37,7 +39,9 @@ public class CircleWithException {
     public static void main(String[] args) {
         try
         {
-            radius = -10;
+            System.out.print("Enter radius of circle: ");
+            Scanner sn = new Scanner(System.in);
+            int radius = sn.nextInt();
             setArea(radius);
             checkvalue(getArea(), radius);
             System.out.println(getArea());
